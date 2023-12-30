@@ -12,11 +12,11 @@ const Navbar = () => {
 
   // Array containing navigation items
   const navItems = [
-    { id: 1, text: "Home" },
-    { id: 2, text: "Company" },
-    { id: 3, text: "Resources" },
-    { id: 4, text: "About" },
-    { id: 5, text: "Contact" },
+    { id: 1, text: "Home" , url:"/" },
+    { id: 2, text: "Products" , url:"products" },
+    { id: 3, text: "About" , url:"about" },
+    { id: 4, text: "Blog" , url:"blog" },
+    { id: 5, text: "Contact" , url:"contact" },
   ];
 
   return (
