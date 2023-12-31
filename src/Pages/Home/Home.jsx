@@ -1,10 +1,12 @@
 import React from 'react'
-import Slider from './Slider'
+import Slider from './Components/Slider.jsx'
+import EditorsPick from './Components/EditorsPick.jsx'
 
 function Home() {
   return (
     <>
     <Slider/>
+    <EditorsPick/>
     </>
   )
 }

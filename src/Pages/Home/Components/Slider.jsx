@@ -14,7 +14,7 @@ import { Pagination, Navigation } from "swiper/modules";
 
 export default function Slider() {
   return (
-    <div className="h-[85vh]">
+    <div className="h-[85vh] z-[-1]">
       <Swiper
         pagination={{
           type: "fraction",
