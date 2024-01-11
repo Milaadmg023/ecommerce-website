@@ -1,34 +1,27 @@
-import './App.css'
-import Navbar from './Pages/Navbar'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ShopCart from './Pages/ShopCart/ShopCart';
-import Blog from './Pages/Blog/Blog';
-import About from './Pages/About/About';
-import Contact from './Pages/Contact/Contact';
-import Products from './Pages/Products/Products';
-import Home from './Pages/Home/Home';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+import Home from "./pages/Home";
+import ProductDetails from "./pages/ProductDetails";
 
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-function App() {
-
+const App = () => {
   return (
-    <>
-    
-    <Router>
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home/>}></Route>
-        <Route path='/blog' element={<Blog/>}></Route>
-        <Route path='/shopcart' element={<ShopCart/>}></Route>
-        <Route path='/products' element={<Products/>}></Route>
-        <Route path='/about' element={<About/>}></Route>
-        <Route path='/contact' element={<Contact/>}></Route>
-      </Routes>
-    </Router>
-    
-    </>
-  )
-}
+    <div className="overflow-hidden">
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/product/:id" element={<ProductDetails />}></Route>
+        </Routes>
+        <Sidebar />
+        <Footer />
+      </Router>
+    </div>
+  );
+};
 
-export default App
+export default App;
