@@ -7,8 +7,6 @@ const Home = () => {
   // get products from product context
   const { products } = useContext(ProductContext);
 
-  console.log(products);
-
   // get only men's and women's clothing category
   const filteredProducts = products.filter((item) => {
     return (
@@ -17,7 +15,7 @@ const Home = () => {
   });
 
   return (
-    <div>
+    <div className="bg-[url('https://img.freepik.com/free-photo/beautiful-dusk-light-colorful-beauty_1203-5706.jpg')] bg-cover bg-fixed">
       <Hero />
       <section id="products" className="py-20">
         <div className="container mx-auto">

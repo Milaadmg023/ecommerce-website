@@ -2,12 +2,15 @@ import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../contexts/CartContext";
 import { ProductContext } from "../contexts/ProductContext";
+import Filter from "../contexts/Filter";
+
 
 const ProductDetails = () => {
   // get the product id from url
   const { id } = useParams();
   const { addToCart } = useContext(CartContext);
   const { products } = useContext(ProductContext);
+
 
   //get the single product based on id
   const product = products.find((item) => {
